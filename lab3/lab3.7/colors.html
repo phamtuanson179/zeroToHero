@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <style type="text/css">
+            a {
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <a id="red" href="" style="color: red;">RED</a>
+        <a id="green" href="" style="color: green;">GREEN</a>
+        <a id="blue" href="" style="color: blue;">BLUE</a>
+
+        <p id="para">
+            Write a simple HTML document called colors.html containing three colored links at the top of the page labeled RED, GREEN, and BLUE. Under the links there should be a small paragraph of text (you make this up) with a starting color of BLACK. Using onMouseOver and onMouseOut events of the links, when a user rolls over the each and any of the color labeled links, the color of the text in the paragraph below should change to the color corresponding to the link the user is hovering over. When the user rolls off the link, the color of the text should go back to it's starting color of BLACK.
+        </p>
+
+        <script type="text/javascript">
+            let red = document.getElementById('red');
+            let green = document.getElementById('green');
+            let blue = document.getElementById('blue');
+            
+            let para = document.getElementById('para');
+
+            red.onmouseover = () => {para.style.color = 'red'};
+            red.onmouseout = onMouseOut;
+
+            green.onmouseover = () => {para.style.color = 'green'};
+            green.onmouseout = onMouseOut;
+            
+            blue.onmouseover = () => {para.style.color = 'blue'};
+            blue.onmouseout = onMouseOut;
+
+            function onMouseOut()
+            {
+                para.style.color = 'black';
+            }
+        </script>
+    </body>
+</html>
