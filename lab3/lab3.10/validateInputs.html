@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            h1 {
+                text-align: center;
+            }
+
+            form {
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>REGISTRATION FORM</h1>
+        <form id="regForm" name="regForm" method="post" >
+            <p>
+                <label for="fullname">Full name:</label>
+                <input id="fullname" type="text" name="Fullname" 
+                    pattern="[a-zA-Z]{1,40}" title="Maximum 40 characters [a-z] [A-Z]" required/>
+            </p>
+            <br>
+            <p>
+                
+                <label for="username">Username:</label>
+                <input id="username" type="text" name="Username"
+                    pattern=".{6,15}" title="6 characters minimum" required/>
+            </p>
+            <br>
+            <p>
+                
+                <label for="email">E-mail:</label>
+                <input id="email" type="email" name="Email" required/>
+            </p>
+            <br>
+            <p>
+                
+                <label for="password">Password:</label>
+                <input id="password" type="password" name="Password" 
+                    pattern=".{6,15}" title="6 characters minimum"required/>
+            </p>
+            <br>
+            <p>
+                <label for="telephone">Telephone:</label>
+                <input id="telephone" type="tel" name="Telephone" 
+                    pattern="\+?[0-9]{6,15}" title="Please enter a valid telephone number" required/>
+            </p>
+            <br>
+            <p id="placeholder"></p>
+            <br>
+            <p>
+                <input id="submit" type="submit" value="Send" name="Submit" />
+                <input type="reset" value="Reset" name="Reset" />
+            </p>
+        </form>
+
+        <script>
+            let regForm = document.getElementById("regForm");
+            let placeholder = document.getElementById("placeholder");
+            regForm.addEventListener('submit', (event) =>
+            {
+                event.preventDefault();
+                placeholder.textContent = 'Submitted';
+            })
+        </script>
+    </body>
+</html>
