@@ -8,7 +8,7 @@
    	$user = 'root';
    	$pass = '';
    	$mydb = 'mydatabase';
-   	$table_name = 'Products';
+   	$table_name = 'products';
    	$connect = mysqli_connect($server, $user, $pass, $mydb);
    	if (!$connect) {
         	die ("Cannot connect to $server using $user");
