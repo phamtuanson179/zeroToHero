@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+    <Placemark>
+        <name>67 Ngõ Gốc Đề</name>
+        <description>Nhà trọ.</description>
+        <Point>
+            <coordinates>105.91212147911079,20.56705359848218,12.30347463558939</coordinates>
+        </Point>
+    </Placemark>
+</kml>
